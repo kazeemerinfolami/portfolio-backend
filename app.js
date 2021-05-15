@@ -14,12 +14,12 @@ const route = require('./route')
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(cors())
-// if ((process.env.NODE_ENV = 'development')) {
-//     app.use(cors({ origin: `http://localhost:3000` }))
-// }
-// if ((process.env.NODE_ENV = 'production')) {
-//     app.use(cors({ origin: `https://gallery-app-client.herokuapp.com` }))
-// }
+if ((process.env.NODE_ENV = 'development')) {
+    app.use(cors({ origin: `http://localhost:3000` }))
+}
+if ((process.env.NODE_ENV = 'production')) {
+    app.use(cors({ origin: `https://gallery-app-client.herokuapp.com` }))
+}
 app.use('/api', route)
 
 const port = process.env.PORT || 9000
