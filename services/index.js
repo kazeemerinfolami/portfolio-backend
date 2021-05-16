@@ -484,7 +484,7 @@ body {font-family: 'Muli', sans-serif;}
           });
       }
       return res.json({
-        message: `Thanks for contacting me me :)`,
+        message: `Message sent`,
       });
     })
     .catch((err) => {
